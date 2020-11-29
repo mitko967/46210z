@@ -1,0 +1,124 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="_46210z.Site1" %>
+
+<%@ Register assembly="DevExpress.Web.Bootstrap.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.Bootstrap" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+   
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 543px;
+        }
+        .auto-style2 {
+            height: 20px;
+        }
+        .auto-style3 {
+            width: 543px;
+            height: 20px;
+        }
+    </style>
+</head>
+  
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width:100%;" border="0">
+                <tr>
+                    <td class="auto-style5">
+                        <center>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo-long-bg.png" BorderStyle="Solid" BackColor="#CCCCCC" />
+                            </center>
+                    </td>
+                    <td class="auto-style5">
+                        &nbsp;</td>
+                    <td class="auto-style8">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style6"> 
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BorderStyle="Solid" Font-Names="Times New Roman" ForeColor="White">
+                            <Items>
+                                <asp:MenuItem Text="Начало" Value="Начало" NavigateUrl="~/Nachalo.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="За УНСС" Value="ZaUNSS" NavigateUrl="~/ZaUNSS.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Профил" Value="Профил" NavigateUrl="~/Profil.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Галерия" Value="Галерия" NavigateUrl="~/Galeriq.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Контакти" Value="Контакти" NavigateUrl="~/Kontakti.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Учебна дейност" Value="Учебна програма">
+                                    <asp:MenuItem Text="Студентски практики" Value="Studentski Praktiki" NavigateUrl="~/Uchebna Deinost.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Актуално" Value="Актуално" NavigateUrl="~/Aktualno.aspx"></asp:MenuItem>
+                            </Items>
+                            <StaticMenuStyle BackColor="#999999" />
+                        </asp:Menu>
+                       
+                    </td>
+                    <td class="auto-style6"> 
+                        &nbsp;</td>
+                    <td class="auto-style9">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">
+                        <center>
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/4.png" Height="250px" Width="864px" />
+                            </center>
+                    </td>
+                    <td class="auto-style4">
+                        &nbsp;</td>
+                    <td class="auto-style10">
+                        </td>
+                </tr>
+                </table>
+            <table style="width:100%;" border="0">
+                <tr>
+                    <td class="auto-style3">
+                        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="544px">
+                            <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                            <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                            <OtherMonthDayStyle ForeColor="#999999" />
+                            <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                            <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                            <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                            <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                            <WeekendDayStyle BackColor="#CCCCFF" />
+                        </asp:Calendar>
+                    </td>
+                    <td class="auto-style2">
+                      <center>
+                        <asp:TreeView ID="TreeView1" runat="server" Width="273px" BackColor="#999999" Font-Names="Times New Roman" ForeColor="White">
+                            <Nodes>
+                                <asp:TreeNode NavigateUrl="~/Nachalo.aspx" Text="Home" Value="Home"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/ZaUNSS.aspx" Text="About" Value="About"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Profil.aspx" Text="Log-in/Register" Value="Log-in/Register"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Galeriq.aspx" Text="Gallery" Value="Gallery"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Kontakti.aspx" Text="Contacts" Value="Contacts"></asp:TreeNode>
+                                <asp:TreeNode Text="Education" Value="Education">
+                                    <asp:TreeNode NavigateUrl="~/Uchebna Deinost.aspx" Text="Student training" Value="Student training"></asp:TreeNode>
+                                </asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Aktualno.aspx" Text="News page" Value="News page"></asp:TreeNode>
+                            </Nodes>
+                        </asp:TreeView>
+                          </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style1">
+            
+                    </td>
+                    <td class="auto-style2">
+                        &nbsp;</td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
